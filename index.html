@@ -69,28 +69,40 @@
 </head>
 <body>
     <center>
-        <h1>Happy Birthday Adline</h1>
+        <h1>Happy Birthday <span id="change">Adline Paul</span></h1>
         <div class="login">
-            <select name="name" id="name">
+            <select name="name" id="id">
                 <option value="">Select a person</option>
-                <option value="poornima">Poornima</option>
-                <option value="ajay">Ajay</option>
-                <option value="admidil">Admidil</option>
-                <option value="Joe">Joe</option>
+                <option value="0">Poornima</option>
+                <option value="1">Ajay</option>
+                <option value="2">Admidil</option>
+                <option value="3">Joe</option>
             </select><br>
             <input id="password" type="password" placeholder="Enter Password"><br>
             <button id="btn" class="btn">Enter</button>
         </div>
     </center>
     <script>
+        const name = ["poornima","ajay","admidil","joe"];
+        const pass = ["poornima","ajay","admidil","joe"];
         document.getElementById("btn").addEventListener("click",()=>{
-            var name = document.getElementById("name").value;
-            var password = document.getElementById("password").value;
-            if (name === "Joe" && password === "pumpkin") {
-                window.location.href = "pages/joe.html";
+            var id = document.getElementById("id").value;
+            var password = document.getElementById("password").value.toLowerCase();
+            if (pass[id] === password) {
+                window.location.href = "pages/"+name[id]+".html";
             } else {
-                alert("Choose another name!!");
+                alert("Wrong Username or Password");
             }
+        });
+        const change = document.getElementById("change");
+        change.addEventListener("mouseover",()=>{
+            change.innerHTML = "Easter Egg";
+        });
+        change.addEventListener("mouseout",()=>{
+            change.innerHTML = "Adline Paul";
+        });
+        change.addEventListener("dblclick",()=>{
+            window.location.href = "pages/joeorg.html"
         });
     </script>
 </body>
