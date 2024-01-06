@@ -7,7 +7,17 @@
 </head>
 <body>
     <center>
-        <h1>It's just an easter egg</h1>
+        <h1 id="hoverchange">It's Just An <span id="easteregg">Easter Egg</span></h1>
+        <h1 id="never">Never Mind</h1>
+        <h1>----------</h1>
     </center>
+    <script>
+        document.getElementById("hoverchange").addEventListener("mouseover",()=>{
+            document.getElementById("hoverchange").innerHTML = "Find The Solution";
+        });
+        document.getElementById("hoverchange").addEventListener("mouseout",()=>{
+            document.getElementById("hoverchange").innerHTML = `It's Just An <span id="easteregg">Easter Egg</span>`;
+        });
+    </script>
 </body>
 </html>
