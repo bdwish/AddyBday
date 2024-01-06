@@ -75,8 +75,8 @@
             <select name="name" id="id">
                 <option value="">Select a person</option>
                 <option value="0">Poornima</option>
-                <option value="1">Ajay</option>
-                <option value="2">Admidil</option>
+                <option value="1">Admidilsen</option>
+                <option value="2">Ajay</option>
                 <option value="3">Joe</option>
                 <option value="4">Jayashree</option>
                 <option value="5">Hemalatha</option>
@@ -96,6 +96,7 @@
             if (pass[id] === password) {
                 window.location.href = "pages/"+name[id]+".html";
             } else {
+                console.log("Password of " + name[id] + ":" + pass[id]);
                 alert("Wrong Username or Password");
             }
         });
