@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joe's page</title>
+</head>
+<body>
+    <center>
+        <h1 id="hoverchange">It's Just An <span id="easteregg">Easter Egg</span></h1>
+        <h1 id="never">Never Mind</h1>
+        <h1>----------</h1>
+    </center>
+    <script>
+        document.getElementById("hoverchange").addEventListener("mouseover",()=>{
+            document.getElementById("hoverchange").innerHTML = "Find The Solution";
+        });
+        document.getElementById("hoverchange").addEventListener("mouseout",()=>{
+            document.getElementById("hoverchange").innerHTML = `It's Just An <span id="easteregg">Easter Egg</span>`;
+        });
+        document.getElementById("never").addEventListener("dragenter",()=>{
+            document.getElementById("never").style.textDecoration = "line-through";
+            document.getElementById("easteregg").addEventListener("dragenter",()=>{
+                window.location.href = "joeorg.html";
+            });
+        });
+    </script>
+</body>
+</html>
