@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz</title>
-    <link rel="shortcut icon" href="../favicon/quiz.ico" type="image/x-icon">
+    <title>Joe's Page</title>
+    <link rel="shortcut icon" href="../favicon/cake.ico" type="image/x-icon">
     <style>
         body{
             background: rgb(51,24,107);
@@ -13,13 +13,77 @@
         }
         h1{
             color: azure;
-            font-size: 400%;
+            font-size: 500%;
+        }
+        h2{
+          color: lavenderblush;
+        }
+        p {
+          color: lavender;
+        margin: 0%;
+        width: 75%;
+        font-size: x-large;
+        position: relative;
+        left: 10%;
+        }
+        img{
+          width: 150%;
+        }
+        table{
+          position: relative;
+          left: 5%;
+          width: 75%;
         }
     </style>
 </head>
 <body>
     <center>
+        <iframe
+        src="../audio/bg.mp3"
+        allow="autoplay"
+        style="display: none"
+        id="iframeAudio"
+      >
+      </iframe>
+      <audio autoplay loop id="playAudio">
+        <source src="../audio/bg.mp3" />
+      </audio>
         <h1>Happy Birthday Pumpkin</h1>
+        <table>
+          <tr>
+            <td>
+              <img src="../img/joeorg.jpg" alt="Addy pic">
+            </td>
+            <td>
+              <p>Happy porantha day ammu.
+                I know you hate this day. 
+                But I hope this day will be a special one. Because you have becoame an adult now. 
+                Take care of yourself. You are very special person in my life. 
+                Have great fun today. Don't be afraid of this day. I will be with you all the time. 
+                This gift is to remind you that I am always with you. 
+                Don't worry, this year will be very special for you. 
+                I will always be in your side. You are always my pondati. 
+                You are always my pumpkin. I hope, this website will be special one. 
+                Sorry, this is much I can do for the birthday. 
+                Next year your birthday will be a very special one. 
+                I have given you this gift, to secure your pillow from you. 
+                I am always by your side.
+              </p>
+            </td>
+          </tr>
+        </table>
+        <h2>P.S.:	💖 I love You 💖</h2>
+        <h2>You are my partner</h2>
     </center>
+    <script>
+        var isChrome =
+          /Chrome/.test(navigator.userAgent) &&
+          /Google Inc/.test(navigator.vendor);
+        if (!isChrome) {
+          document.getElementById("iframeAudio").remove();
+        } else {
+          document.getElementById("playAudio").remove(); // just to make sure that it will not have 2x audio in the background
+        }
+      </script>
 </body>
 </html>
