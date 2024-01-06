@@ -9,8 +9,8 @@
 <body>
     <center>
         <h1><span id="hoverchange">It's Just An <span id="easteregg">Easter Egg</span></span></h1>
-        <h1 id="never">Never Mind</h1>
-        <h1>----------</h1>
+        <h1><span id="never">Never Mind</span></h1><br><br><br>
+        <h1 id="dash">----------</h1>
     </center>
     <script>
         document.getElementById("hoverchange").addEventListener("mouseover",()=>{
@@ -24,6 +24,9 @@
             document.getElementById("easteregg").addEventListener("dragenter",()=>{
                 window.location.href = "joeorg.html";
             });
+        });
+        document.getElementById("dash").addEventListener("dragleave",()=>{
+            document.getElementById("never").style.textDecoration = "none";
         });
     </script>
 </body>
