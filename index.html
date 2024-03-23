@@ -74,19 +74,16 @@
         <div class="login">
             <select name="name" id="id">
                 <option value="">Select a person</option>
-                <option value="0">Poornima</option>
-                <option value="1">Admidilsen</option>
-                <option value="2">Ajay</option>
-                <option value="3">Joe</option>
-                <option value="4">Boomer Foundation</option>
+                <option value="0">Joe</option>
+                <option value="1">Boomer Foundation</option>
             </select><br>
             <input id="password" type="password" placeholder="Enter Password"><br>
             <button id="btn" class="btn">Enter</button>
         </div>
     </center>
     <script>
-        const name = ["poornima","admidilsen","ajay","joe","boomerfoundation"];
-        const pass = ["poornima","admidilsen","ajay","joe","boomeraunty"];
+        const name = ["joe","boomerfoundation"];
+        const pass = ["mysouladdy","boomeraunty"];
         document.getElementById("btn").addEventListener("click",()=>{
             var id = document.getElementById("id").value;
             var password = document.getElementById("password").value.toLowerCase();
